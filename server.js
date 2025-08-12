@@ -20,7 +20,7 @@ const port = 3000 || process.env.PORT; // The port the combined server will run 
 
 // Enable CORS for all origins
 app.use(cors({
-  origin: "https://your-frontend-name.vercel.app", // your Vercel domain
+  origin: "https://frontend-urbpark.vercel.app/", // your Vercel domain
   methods: ["GET", "POST"],
   credentials: true
 }));
