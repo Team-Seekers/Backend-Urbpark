@@ -16,7 +16,7 @@ import Razorpay from "razorpay";
 import crypto from "crypto"; // crypto is a built-in Node.js module
 
 const app = express();
-const port = 3000 || process.env.PORT; // The port the combined server will run on
+const port = process.env.PORT || 3000; // The port the combined server will run on
 
 // Enable CORS for all origins
 app.use(cors({
