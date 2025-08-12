@@ -69,6 +69,9 @@ const razorpay = new Razorpay({
 // --- API Endpoints ---
 // ---------------------------
 
+app.get('/',(req,res)=>{
+  res.send("hello");
+})
 // 1. Parking Spaces API Endpoint
 // This endpoint simulates fetching parking spaces from the database
 app.post("/api/parking-spaces", (req, res) => {
