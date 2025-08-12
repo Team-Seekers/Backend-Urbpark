@@ -1,6 +1,7 @@
 {
   "name": "urb-park-razorpay-server",
   "version": "1.0.0",
+  "type":"module",
   "description": "Razorpay server for Urb-Park application",
   "main": "server.js",
   "scripts": {
