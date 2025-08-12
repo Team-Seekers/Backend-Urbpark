@@ -19,7 +19,11 @@ const app = express();
 const port = 3000 || process.env.PORT; // The port the combined server will run on
 
 // Enable CORS for all origins
-app.use(cors());
+app.use(cors({
+  origin: "https://your-frontend-name.vercel.app", // your Vercel domain
+  methods: ["GET", "POST"],
+  credentials: true
+}));
 // Parse JSON body for incoming requests
 app.use(bodyParser.json());
 
