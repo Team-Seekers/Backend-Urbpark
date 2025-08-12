@@ -74,7 +74,7 @@ app.get('/',(req,res)=>{
 })
 // 1. Parking Spaces API Endpoint
 // This endpoint simulates fetching parking spaces from the database
-app.post("/api/parking-spaces", (req, res) => {
+app.post('/api/parking-spaces', (req, res) => {
   const { location, time } = req.body;
   console.log(
     `Received request for parking at location: ${location} and time: ${time}`
@@ -93,7 +93,7 @@ app.post("/api/parking-spaces", (req, res) => {
 });
 
 // 2. Razorpay Create Order Endpoint
-app.post("/api/create-order", async (req, res) => {
+app.post('/api/create-order', async (req, res) => {
   try {
     const { amount, currency = "INR" } = req.body;
 
@@ -130,7 +130,7 @@ app.post("/api/create-order", async (req, res) => {
 });
 
 // 3. Razorpay Verify Payment Endpoint
-app.post("/api/verify-payment", async (req, res) => {
+app.post('/api/verify-payment', async (req, res) => {
   try {
     const { razorpay_order_id, razorpay_payment_id, razorpay_signature } =
       req.body;
@@ -162,7 +162,7 @@ app.post("/api/verify-payment", async (req, res) => {
 });
 
 // 4. Health check endpoint
-app.get("/api/health", (req, res) => {
+app.get('/api/health', (req, res) => {
   res.json({ status: "OK", message: "UrbPark combined server is running" });
 });
 
